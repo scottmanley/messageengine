@@ -1,12 +1,9 @@
-#! /usr/local/bin/node --harmony
-
-const
-    azure = require('azure'),
-    express = require('express'),
-    app = express(),
-    queueName = 'messagequeue',
-    queueService = azure.createQueueService("messagequeue", "B5OuSJlUggdVNGQv6Wm9HFefd/gIYCQc2zwAPUbNKTsSaixNh9TEnMHZLxQt/Efcwd5fYJVTcdnWhG4d4wGOXw=="),
-    port = process.env.PORT || 1337;
+var azure = require('azure');
+var express = require('express')
+var app = express();
+var queueName = 'messagequeue';
+var queueService = azure.createQueueService("messagequeue", "B5OuSJlUggdVNGQv6Wm9HFefd/gIYCQc2zwAPUbNKTsSaixNh9TEnMHZLxQt/Efcwd5fYJVTcdnWhG4d4wGOXw==");
+var port = process.env.PORT || 1337;
 
 app.use(express.logger('dev'));
 app.get('/api/:name', function(req, res) {
