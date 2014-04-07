@@ -1,5 +1,5 @@
 var azure = require('azure');
-var express = require('express')
+var express = require('express');
 var app = express();
 var queueName = 'messagequeue';
 var queueService = azure.createQueueService("messagequeue", "B5OuSJlUggdVNGQv6Wm9HFefd/gIYCQc2zwAPUbNKTsSaixNh9TEnMHZLxQt/Efcwd5fYJVTcdnWhG4d4wGOXw==");
